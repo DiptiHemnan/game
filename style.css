@@ -1,119 +1,117 @@
-body {
-    background-image: url('game.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat;
-}
-h1 {
-	color: rgb(46, 3, 28);
-	margin-bottom: -5px;
-}
-p {
-	margin-bottom: -10px;
-}
-.ui {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.row {
-	display: flex;
-}
-.cell {
-	border: none;
-	width: 80px;
-	height: 80px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 24px;
-	text-align: center;
-	cursor: pointer;
-    background-color: rgb(255, 255, 255, 0.0);
-}
-.cell:active {
-	outline: none;
-}
-/* 3*3 Grid */
-#b1{
-	border-bottom: 1px solid rgb(255, 255, 255);
-	border-right: 1px solid rgb(255, 255, 255);
+body{
+background-color: rgba(0, 0, 0, 0.753);
+ text-align: center;
+ color: thistle;
 }
 
-#b2 {
-	border-bottom: 1px solid rgb(255, 255, 255);
-	border-right: 1px solid rgb(255, 255, 255);
-	border-left: 1px solid rgb(255, 255, 255);
+/*Made the grid to center,created 3 rows and columns */
+.grid{
+    display: grid;
+    width: 380px;
+    height: 380px;
+    grid-template: repeat(3,1fr)/repeat(3,1fr);
+    margin:  25px auto;
+    grid-column-gap: 8px;
+    grid-row-gap:8px;
+  
+
+}
+/*Added background color the boxes to teal*/
+div{
+   
+    background-color: teal;
+    border-radius: 10px;
+    padding: 25px;
+   
+}
+/*The Cross and nought image size*/
+img{
+    width: 60px;
+    height: 60px;
 }
 
-#b3 {
-	border-bottom: 1px solid rgb(255, 255, 255);
-	border-left: 1px solid rgb(255, 255, 255);
+.buttons{
+    display: flex;
+    /*grid-template-columns: 70px minmax(140px,230px);*/
+    justify-content: center;
+    /*grid-column-gap: 12px;*/
+    margin-left: 20px;
+}
+.buttons div{
+    background-color: thistle;
+    color: teal;
+    padding: 0;
+    justify-self: start;
+    margin:0px 7px;
+    
 }
 
-#b4 {
-	border-top: 1px solid rgb(255, 255, 255);
-	border-bottom: 1px solid rgb(255, 255, 255);
-	border-right: 1px solid rgb(255, 255, 255);
-}
-	
-#b5 {
-	border: 1px solid rgb(255, 255, 255);
+
+/*This is the image that appears in the button when a player when*/
+.button-img{
+    width: 13px;
+    height: 13px;;
 }
 
-#b6 {
-	border-top: 1px solid rgb(255, 255, 255);
-	border-bottom: 1px solid rgb(255, 255, 255);
-	border-left: 1px solid rgb(255, 255, 255);
+.buttons div h3{
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
-#b7 {
-	border-top: 1px solid rgb(255, 255, 255);
-	border-right: 1px solid rgb(255, 255, 255);
+table{
+    border-collapse: collapse;
+    border: 20px solid hotpink;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+  
+}
+td{
+    border-top: 3px solid burlywood;
+    
+}
+td:first-child{
+    border-right: 3px solid burlywood;
+}
+th{
+    padding:0px 10px;
+}
+td{
+    padding: 0;
 }
 
-#b8 {
-	border-top: 1px solid rgb(255, 255, 255);
-	border-right: 1px solid rgb(255, 255, 255);
-	border-left: 1px solid rgb(255, 255, 255);
+#button{
+    padding:5px 10px;
 }
 
-#b9 {
-	border-top: 1px solid rgb(255, 255, 255);
-	border-left: 1px solid rgb(255, 255, 255);
-}
-/* Reset Button */
-#but {
-	box-sizing: border-box;
-	width: 95px;
-	height: 40px;
-	border: 1px solid rgb(3, 44, 46);
-	margin-left: auto;
-	border-radius: 8px;
-	font-family: Verdana,
-		Geneva, Tahoma, sans-serif;
+@media only screen and (max-width:1150px){
 
-	background-color: rgb(141, 133, 133);
-	color: rgb(3, 44, 46);
-	font-size: 20px;
-	cursor: pointer;
+    table{
+        margin:15px auto;      
+        position:static;
+}
+.buttons{
+    margin-left: 0px;
 }
 
-/* Player turn space */
-#print {
-	font-family: Verdana,
-		Geneva, Tahoma, sans-serif;
-	color: rgb(7, 44, 4);
-	font-size: 20px;
 }
 
-/* Main Container */
-#main {
-	text-align: center;
-}
+@media only screen and (max-width:655px){
+    .grid{
+        display: grid;
+        width: 320px;
+        height: 320px;
+        grid-template: repeat(3,1fr)/repeat(3,1fr);
+        margin:  25px auto;
+        grid-column-gap: 8px;
+        grid-row-gap:8px;
+      
+    
+    }
 
-/* Game Instruction Text */
-#ins {
-	font-family: Verdana,Geneva,
-					Tahoma, sans-serif;
-	color: rgb(3, 44, 46);
+    img{
+        width: 45px;
+        height: 45px;
+    }
+   
 }
